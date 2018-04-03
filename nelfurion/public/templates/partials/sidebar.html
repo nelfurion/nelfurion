@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="sidebar">
+  <button type="button" id="sidebar-toggle" name="button">
+    <img src="{% static "public/icons/menu.png" %}" width="60px" alt="">
+  </button>
+  <ul class="sidebar-menu">
+    <li id="sidebar-menu-1">ASDSAD 1</li>
+    <li id="sidebar-menu-2">ASDSAD 2</li>
+    <li id="sidebar-menu-3">ASDSAD 3</li>
+    <li id="sidebar-menu-4">ASDSAD 4</li>
+  </ul>
+  <ul class="sidebar-collapse" style="display: none;">
+    <li for="sidebar-menu-1"> C1 </li>
+    <li for="sidebar-menu-2"> C2 </li>
+    <li for="sidebar-menu-3"> C3 </li>
+    <li for="sidebar-menu-4"> C4 </li>
+  </ul>
+</div>

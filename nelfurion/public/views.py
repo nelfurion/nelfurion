@@ -1,5 +1,4 @@
 from django.shortcuts import render
 
 def index(request):
-    print('ASDASD')
-    return render(request, 'public/index.html')
+    return render(request, 'public/index.html', {'projects': [1,2]})
