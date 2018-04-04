@@ -2,6 +2,32 @@
   padding: 0;
   padding: 0;
   border: none;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+#sidebar-toggle>img {
+  width: 30px;
+}
+
+.sidebar {
+  border-right: 1px solid white;
+  height: 100vh;
+  text-align: center;
+}
+
+.sidebar>div {
+  padding-left: 0px;
+  text-align: center;
+}
+
+.sidebar-link {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sidebar-collapse {
+  display: inline-block;
 }
