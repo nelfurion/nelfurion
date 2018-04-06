@@ -1,3 +1,21 @@
 .intro-img {
   width: 100%;
 }
+
+.intro-container {
+  height: 100vh;
+}
+
+.intro-content {
+  padding-top: 50px;
+}
+
+.intro-content h1 {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.intro-content p {
+  font-size: 1.4em;
+  color: rgba(255,255,255,.7);
+}

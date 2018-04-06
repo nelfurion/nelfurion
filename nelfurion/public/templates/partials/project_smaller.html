@@ -1,0 +1,15 @@
+<div class="project-card project-small-card-img card bg-dark text-white">
+  <img class="project-card-img card-img" src="{{project.media_url}}" alt="Card image">
+  <div class="project-card-img-overlay overlay-invisible card-img-overlay">
+    {% if project.title_dark %}
+      <h5 class="card-title card-title-dark">{{project.title}}</h5>
+    {% else %}
+      <h5 class="card-title">{{project.title}}</h5>
+    {% endif %}
+
+      <p class="card-text">{{project.description}}</p>
+      <p class="card-text">
+        <a href="{{project.link.url}}" target="blank">{{project.link.title}}</a>
+      </p>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+.project-card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-visible {
+  visibility: visible;
+  background-color: black;
+  animation: fadeIn 0.2s linear;
+  animation-fill-mode: none;
+  opacity: 0.9;
+  padding-top: 50px;
+}
+
+.scrollable {
+  overflow-y: scroll;
+}
+
+.project-card-visible-background {
+  display: none;
+  animation: fadeInMore 0.5s linear;
+  animation-fill-mode: none;
+  filter: alpha(opacity=50);
+}
+
+.overlay-visible h5,
+.overlay-visible p {
+  animation: fadeInTop 0.7s linear;
+  animation-fill-mode: none;
+}
+
+.overlay-visible .card-title {
+  color: white;
+}
+
+.overlay-invisible {
+  visibility: hidden;
+}
+
+.overlay-invisible .card-title {
+  visibility: visible;
+}
+
+.project-card {
+  height: 330px;
+}
+
+.card-title-dark {
+  color: #181818;
+}
+
+/*.project-card .card-small-title {
+  color: black;
+}*/
+
+.project-container {
+  margin-bottom: 20px;
+}
+
+.project-project {
+  visibility: hidden;
+}
+
+.project-small-card-img {
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeInTop {
+  from {margin-top: -20px; opacity: 0;}
+  to {margin-top: 0px; opacity: 1;}
+}
+
+@keyframes fadeInMore {
+    0% {
+       opacity: 0.0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+       opacity: 0.0;
+    }
+
+    100% {
+       opacity: 0.9;
+    }
+}

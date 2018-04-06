@@ -1,31 +1,30 @@
 {% load static %}
 
-<section class="protfolio" id="ourwork">
-  <div class="row">
-    <div class="portfolioFilter">
-      <ul>
-        <li><a href="#" data-filter="*" class="current">All</a></li>
-        <li><a href="#" data-filter=".wordpress">Wordpress</a></li>
-        <li><a href="#" data-filter=".template">template</a></li>
-        <li><a href="#" data-filter=".illustration">Illustration</a></li>
-        <li class="last"><a href="#" data-filter=".webdesign">Web Design</a></li>
-      </ul>
-    </div>
-    <ul class="portfolioContainer row">
-      {% for project in projects %}
-        <li class="template wordpress illustration col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <div class="lightCon">
-            <span class="hoverBox">
-              <span class="smallIcon">
-                <a rel="lightbox-demo" href="{% static "public/icons/menu.png" %}" title="Project Title2" class="zoom lb lb_warsaw1">
-                  <i class="fa fa-search fa-2x"></i>
-                </a>
-              </span>
-            </span>
-            <img src="{% static "public/images/projects/thumb-images/thumb2.jpg" %}" alt="" >
+<div class="row">
+  <ul class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="row">
+          {% for project in projects.left %}
+          <div class="project-container col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <li class="project-project">
+              {% include 'partials/project.html' with project=project %}
+            </li>
           </div>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="row">
+          {% for project in projects.right %}
+          <div class="project-container col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <li class="project-project">
+              {% include 'partials/project.html' with project=project %}
+            </li>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </ul>
+</div>

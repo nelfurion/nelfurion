@@ -1,3 +1,7 @@
+.sidebar-container>div {
+  height: 100%;
+}
+
 #sidebar-toggle {
   padding: 0;
   padding: 0;
@@ -12,9 +16,14 @@
 }
 
 .sidebar {
-  border-right: 1px solid white;
+  border-right: 1px solid rgba(255,255,255,.2);
   height: 100vh;
   text-align: center;
+  position: fixed;
+}
+
+.sidebar * {
+  display: block;
 }
 
 .sidebar>div {
