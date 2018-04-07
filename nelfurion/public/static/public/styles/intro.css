@@ -2,8 +2,10 @@
   width: 100%;
 }
 
-.intro-container {
-  height: 100vh;
+@media(min-width:1310px) {
+  .intro-container {
+    height: 100vh;
+  }
 }
 
 .intro-content {
@@ -18,4 +20,11 @@
 .intro-content p {
   font-size: 1.4em;
   color: rgba(255,255,255,.7);
+}
+
+.img-panel {
+  float: left;
+  position: relative;
+
+  height: 300px;
 }

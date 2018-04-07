@@ -1,0 +1,7 @@
+.activities-media-img {
+  width: 15%;
+}
+
+.activities-media-img>img {
+  width: inherit;
+}

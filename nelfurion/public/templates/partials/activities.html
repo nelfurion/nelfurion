@@ -1,0 +1,40 @@
+<div class="text-centered col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+  <article>
+    <h3 class="heading-separated">Papers, reports and presentations</h3>
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <h4 class="heading-separated-md">Papers</h4>
+        <div>
+          <ul>
+            {% for paper in activities.papers %}
+              <li>
+                <a href="{{paper.link}}"><strong>{{paper.title}}</strong></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <h4 class="heading-separated-md">Reports</h4>
+        <div>
+          <ul class="list-unstyled">
+            {% for report in activities.reports %}
+            <li class="media text-left">
+              <div class="activities-media-img mr-3">
+                <img class="centered-vertically-in-parent" src="{{report.thumbnail}}" alt="Report thumbnail">
+              </div>
+              <div class="media-body">
+                <h5 class="heading-separated-xs mt-0 mb-1">{{report.title}}</h5>
+                <p class="text-sm">{{report.description}}</p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <h4>Presentations</h4>
+      </div>
+    </div>
+  </article>
+</div>
