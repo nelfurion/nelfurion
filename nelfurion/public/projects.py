@@ -1,7 +1,7 @@
 projects = {
     'left': [
          {
-            'media_url': 'http://localhost:8000/static/public/img/chatbot.jpg',
+            'media_url': 'http://localhost:8000/static/public/img/chatbot2.1.jpg',
             'title': 'Thesis',
             'description': 'Leveraging Machine Learning and Natural \
              Language Processing the Jackson chatbot exploits the knowledge of Wikipedia to find answers for the hardest questions, while at the same \
@@ -16,7 +16,7 @@ projects = {
             'background_image': 'http://localhost:8000/static/public/img/jackson.png',
          },
          {
-            'media_url': 'http://localhost:8000/static/public/img/hacktues.png',
+            'media_url': 'http://localhost:8000/static/public/img/hacktues2.2.jpg',
             'title': 'Europe\'s first High School Hackathon!',
             'description': 'HackTUES is the first and only Bulgarian high school Hackathon. Running for 4 consecutive years, \
                              HackTUES confronts students with the dificulties of building Software and Hardware in a real competitive \
@@ -38,7 +38,7 @@ projects = {
             'additional_info_type': 'html',
          },
          {
-            'media_url': 'http://localhost:8000/static/public/img/elsys.png',
+            'media_url': 'http://localhost:8000/static/public/img/elsys2.1.png',
             'title': 'Graduated the best professional technology high school in Bulgaria',
             'description': '<p>In the summer of 2017 I graduated the best professional technology high school in Bulgaria - \
                             <a href="http://elsys-bg.org/" target="blank">ELSYS</a>.</p>\
@@ -68,7 +68,7 @@ projects = {
             'additional_info': '<p><a href="https://smshsite.wordpress.com/" target="blank">Thougs on Computer Science</a></p>',
          },
          {
-            'media_url': 'http://localhost:8000/static/public/img/intern.jpg',
+            'media_url': 'http://localhost:8000/static/public/img/intern2.1.jpg',
             'background_image': 'http://localhost:8000/static/public/img/genes.png',
             'title': 'Extracting Gene Expression Data',
             'description': 'In 2016 I did an internship, describing how specific genes\' expressions vary for different age groups and parts of the brain. \
@@ -111,7 +111,7 @@ projects = {
 
 more_projects = [{
         'title': 'WoahMe',
-        'media_url': 'http://localhost:8000/static/public/img/woahme.png',
+        'media_url': 'http://localhost:8000/static/public/img/woahme2.2.jpg',
         'description': 'Android application for image sharing.',
         'link': {
             'url':'https://github.com/WoahMe/WoahMe',
@@ -119,7 +119,7 @@ more_projects = [{
         }
     }, {
         'title': 'Mobile Food Ordering',
-        'media_url': 'http://localhost:8000/static/public/img/mobile_food_ordering.png',
+        'media_url': 'http://localhost:8000/static/public/img/windows2.3.png',
         'description': 'Universal Windows Application for food ordering.',
         'link': {
             'url':'https://github.com/Windows-Applications-Captain-Cold/Mobile-Food-Ordering',
@@ -127,7 +127,7 @@ more_projects = [{
         }
     }, {
         'title': 'Scacrifice',
-        'media_url': 'http://localhost:8000/static/public/img/scacrifice.png',
+        'media_url': 'http://localhost:8000/static/public/img/scacrifice2.2.png',
         'description': 'A NativeScript stress relieval game.',
         'link': {
             'url':'https://github.com/NativeScriptTA/ScacrificeApp',
@@ -135,7 +135,7 @@ more_projects = [{
         }
     }, {
         'title': 'Arduino-Pong',
-        'media_url': 'http://localhost:8000/static/public/img/arduino_pong.jpeg',
+        'media_url': 'http://localhost:8000/static/public/img/arduino_pong2.1.jpeg',
         'description': 'Ping pong embedded project built using Arduino.',
         'link': {
             'url':'https://github.com/Computer-Architectures-Team/Arduino-Pong',

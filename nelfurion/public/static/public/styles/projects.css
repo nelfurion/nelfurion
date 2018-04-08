@@ -37,9 +37,11 @@
   visibility: hidden;
 }
 
+/*
 .overlay-invisible .card-title {
   visibility: visible;
 }
+*/
 
 .project-card {
   height: 330px;
