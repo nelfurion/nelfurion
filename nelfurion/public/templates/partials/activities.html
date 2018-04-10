@@ -7,8 +7,13 @@
         <div>
           <ul>
             {% for paper in activities.papers %}
-              <li>
-                <a href="{{paper.link}}"><strong>{{paper.title}}</strong></a>
+              <li class="media text-left">
+                <div class="activities-media-img mr-3">
+                  <img class="centered-vertically-in-parent" src="{{papers.thumbnail}}" alt="Report thumbnail">
+                </div>
+                <div class="media-body">
+                  <a href="{{paper.link}}"><strong>{{paper.title}}</strong></a>
+                </div>
               </li>
             {% endfor %}
           </ul>
