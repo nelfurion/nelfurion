@@ -28,3 +28,13 @@
 
   height: 300px;
 }
+
+.intro-img-container {
+  width: 542px;
+  max-width: 542px;
+}
+
+.intro-img-container img {
+  width: 542px;
+  position: relative;
+}

@@ -15,20 +15,6 @@ $('.project-card-img, .project-card-img-overlay').mouseenter(function(event) {
       image.css('display', 'none');
       cardVisibleBackgroundImage.css('display', 'block');
     }
-
-    var overlayHeight = 0;
-    var paddingTop = parseInt(overlay.css('padding-top').split('px')[0])
-    var paddingBottom = parseInt(overlay.css('padding-bottom').split('px')[0])
-
-    $.each(overlay.children(), function (index, child) {
-      overlayHeight += $(child).outerHeight(true);
-    });
-
-    overlayHeight += paddingTop + paddingBottom;
-
-    if (overlay.height() < overlayHeight) {
-      overlay.addClass('scrollable');
-    }
   }
 });
 
@@ -45,20 +31,4 @@ $('.project-card-img-overlay').mouseleave(function(event) {
       image.css('display', 'block');
       cardVisibleBackgroundImage.css('display', 'none');
     }
-
-    $(this).removeClass('scrollable');
-});
-
-$(document).scroll(function() {
-  var projects = $('.project-project');
-  var scrollY = $(this).scrollTop();
-  var windowHeight = $(window).height();
-
-  $.each(projects, function(index, project) {
-    project = $(project);
-    if (scrollY + windowHeight > project.offset().top) {
-      project.css('visibility', 'visible');
-      project.addClass('animated fadeInUp');
-    }
-  });
 });
