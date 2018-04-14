@@ -44,3 +44,32 @@
 .sidebar-collapse {
   display: inline-block;
 }
+
+@media(max-width: 959px) {
+  .sidebar {
+    border-right: none;
+    height: unset;
+    text-align: center;
+    position: unset;
+  }
+
+  .sidebar-menu,
+  .sidebar-link {
+    display: block;
+  }
+
+  .sidebar-link {
+    font-size: 1.1em;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #sidebar-toggle  {
+    width: 100px;
+    margin-bottom: 100px;
+  }
+
+  #sidebar-toggle>img {
+    width: 100px;
+  }
+}

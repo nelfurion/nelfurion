@@ -2,14 +2,14 @@
   <article>
     <h3 class="heading-separated">Papers, reports and presentations</h3>
     <div class="row">
-      <div class="activities-papers col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <div class="activities-papers col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
         <h4 class="heading-separated-md">Papers</h4>
         <div>
           <ul>
             {% for paper in activities.papers %}
               <li class="media text-left">
-                <div>
-                  <img class="activities-media-img-small" src="{{paper.thumbnail}}" alt="Report thumbnail">
+                <div class="activities-media-img-small">
+                  <img src="{{paper.thumbnail}}" alt="Report thumbnail">
                 </div>
                 <div class="media-body">
                   <a href="{{paper.link}}"><strong>{{paper.title}}</strong></a>
@@ -19,7 +19,7 @@
           </ul>
         </div>
       </div>
-      <div class="activities-reports col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <div class="activities-reports col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
         <h4 class="heading-separated-md">Reports</h4>
         <div>
           <ul class="list-unstyled">
@@ -37,7 +37,7 @@
           </ul>
         </div>
       </div>
-      <div class="activities-presentations col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <div class="activities-presentations col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
         <h4>Presentations</h4>
       </div>
     </div>

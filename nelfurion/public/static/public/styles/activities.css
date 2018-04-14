@@ -14,3 +14,21 @@
   display: block;
   margin-right: 5px;
 }
+
+.activities-media-img-small img {
+  width: 100%;
+}
+
+@media(max-width: 959px) {
+  .activities-media-img-small,
+  .activities-media-img {
+    width: 10%;
+    max-width: 50px;
+    margin-right: 50px;
+    height: unset;
+  }
+
+  .activities-media-img>img  {
+    max-width: 50px;
+  }
+}

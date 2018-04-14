@@ -38,3 +38,24 @@
   width: 542px;
   position: relative;
 }
+
+
+@media(max-width: 1200px) {
+  .intro-content h1 {
+    font-size: x-large;
+    line-height: unset;
+  }
+
+  .intro-content p {
+    font-size: 1em;
+  }
+
+  .intro-img-container img {
+    width: 100%;
+    position: relative;
+  }
+
+  .intro-img-container {
+    width: unset;
+  }
+}
