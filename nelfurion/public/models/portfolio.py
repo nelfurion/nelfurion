@@ -1,3 +1,5 @@
+from public.models import helpers
+
 projects = {
     'left': [
          {
@@ -184,34 +186,11 @@ activities = {
     }]
 }
 
-
-def get_projects(options):
+def get_models(options):
     """ options: {'host': hostname} """
     return {
-        'projects': format_projects(projects, options),
-        'more_projects': format_projects(more_projects, options),
-        'hackTUES_video': format_projects(hackTUES_video, options),
-        'activities': format_projects(activities, options),
+        'projects': helpers.format_models(projects, options),
+        'more_projects': helpers.format_models(more_projects, options),
+        'hackTUES_video': helpers.format_models(hackTUES_video, options),
+        'activities': helpers.format_models(activities, options),
     }
-
-def format_projects(projects, options):
-    if type(projects) is list:
-        for i in range(len(projects)):
-            projects[i] = format_project(projects[i], options);
-    else:
-        for key, val in projects.items():
-            if type(val) is list:
-                for i in range(len(val)):
-                    val[i] = format_project(val[i], options)
-            elif type(val) is str:
-                projects[key] = val.format(**options)
-
-    return projects
-
-def format_project(project, options):
-    print(project)
-    for key, val in project.items():
-        if type(val) is str:
-            project[key] = val.format(**options)
-
-    return project

@@ -80,6 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'nelfurion.wsgi.application'
 
+X_FRAME_OPTIONS = 'ALLOW-FROM http://nelfurion.com/'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases

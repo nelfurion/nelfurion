@@ -1,0 +1,7 @@
+<div class="row">
+  {% for contact in contacts %}
+    <div class="{{contact.col}}">
+      {% include 'partials/media-sm.html' with item=contact %}
+    </div>
+  {% endfor %}
+</div>

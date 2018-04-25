@@ -3,14 +3,18 @@
 <!-- 3:3 aspect ratio -->
 <!-- 1:1 aspect ratio -->
 <div class="row">
-  <div class="video-description invisible col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+  <div class="video-description invisible col-xs-10 offset-xs-1 col-sm-10 offset-sm-1 col-md-3 col-lg-3 col-xl-3">
     <h3>{{video.title}}</h3>
     <br>
     <div>{{video.description | safe}}</div>
   </div>
-  <div class="video invisible col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-    <div class="embed-responsive embed-responsive-{{ratio}}">
-      <iframe class="embed-responsive-item" src="{{video.url}}"></iframe>
+  <div class="video invisible col-xs-12 col-sm-12 col-md-9 col-lg-6 col-xl-6">
+    <div class="row">
+      <div class="col-xs-10 offset-xs-1 col-sm-10 offset-sm-1 col-md-12 col-lg-12 col-xl-12">
+        <div class="embed-responsive embed-responsive-{{ratio}}">
+          <iframe class="embed-responsive-item" src="{{video.url}}"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </div>

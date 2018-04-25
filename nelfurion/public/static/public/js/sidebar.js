@@ -15,10 +15,10 @@ $('#sidebar-toggle').on('click', function(event) {
     $('.sidebar-collapse').css('display', 'none');
 
     $('#main').removeClass('col-xs-12 col-sm-12 col-md-12 col-lg-11 col-xl-11');
-    $('#main').addClass('col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9');
+    $('#main').addClass('col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10');
 
     $('.sidebar-container').removeClass('col-xs-12 col-sm-12 col-md-12 col-lg-1 col-xl-1');
-    $('.sidebar-container').addClass('col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3');
+    $('.sidebar-container').addClass('col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2');
 
     var interval = 0;
     $.each(links, function (index, link) {
@@ -56,10 +56,10 @@ $('#sidebar-toggle').on('click', function(event) {
       $('.sidebar-menu').css('display', 'none');
       $('.sidebar-collapse').css('display', 'block');
 
-      $('#main').removeClass('col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xl-9');
+      $('#main').removeClass('col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10');
       $('#main').addClass('col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xl-11');
 
-      $('.sidebar-container').removeClass('col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3');
+      $('.sidebar-container').removeClass('col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2');
       $('.sidebar-container').addClass('col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1');
     }, links.length * interval_step)
   }

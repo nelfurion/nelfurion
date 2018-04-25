@@ -1,0 +1,9 @@
+<div class="media-horizontal-sm">
+  <img src="{{item.src}}" alt="{{item.alt}}">
+  {%if item.url %}
+    <span><a href="{{item.url}}" target="blank">{{item.content}}</a></span>
+  {% else %}
+    <span>{{item.content}}</span>
+  {% endif %}
+
+</div>

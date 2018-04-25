@@ -8,29 +8,51 @@ var GSAPAnimationProvider = (function (parent, Tween, $) {
 
   gsapAnimationProvider.prototype = new parent();
 
-  gsapAnimationProvider.prototype.scrollTo = function (toElement) {
+  gsapAnimationProvider.prototype.scrollTo = function (toElement, options) {
+    options = options || {};
+    var animationOptions = $.extend({
+      scrollTo: {y: offset}
+    }, options);
+
     var offset= toElement.offset().top;
 
-    return self.tween.to($(window), 1, {
-      scrollTo: {y: offset}
-    });
+    return self.tween.to($(window), 1, animationOptions);
   };
 
-  gsapAnimationProvider.prototype.slideLeft = function (element, fromPx, duration) {
-    return self.tween.from(element, duration, {left: fromPx});
+  gsapAnimationProvider.prototype.slideLeft = function (element, fromPx, duration, options) {
+    options = options || {};
+    var animationOptions = $.extend({left: fromPx}, options);
+    return self.tween.from(element, duration, animationOptions);
   };
 
-  gsapAnimationProvider.prototype.slideRight = function (element, fromPx, duration) {
-    return self.tween.from(element, duration, {right: fromPx});
+  gsapAnimationProvider.prototype.slideRight = function (element, fromPx, duration, options) {
+    options = options || {};
+    var animationOptions = $.extend({right: fromPx}, options);
+    return self.tween.from(element, duration, animationOptions);
   };
 
-  gsapAnimationProvider.prototype.fadeIn = function (element, initialOpacity, duration) {
-    return self.tween.from(element, duration, {opacity: initialOpacity});
+  gsapAnimationProvider.prototype.fadeIn = function (element, initialOpacity, duration, options) {
+    options = options || {};
+    var animationOptions = $.extend({opacity: initialOpacity}, options);
+    return self.tween.from(element, duration, animationOptions);
   };
 
-  gsapAnimationProvider.prototype.enlarge = function (element, toWidth, toHeight, duration) {
-    return self.tween.to(element, duration, { width: toWidth, height: toHeight });
+  gsapAnimationProvider.prototype.fadeOut = function (element, duration, options) {
+    options = options || {};
+    var animationOptions = $.extend({opacity: 0}, options);
+    return self.tween.to(element, duration, animationOptions);
   };
+
+  gsapAnimationProvider.prototype.enlarge = function (element, toWidth, toHeight, duration, options) {
+    options = options || {};
+    var animationOptions = $.extend({ width: toWidth, height: toHeight }, options);
+    return self.tween.to(element, duration, animationOptions);
+  };
+
+  /* TODO: Extract new call animation function for this */
+  function mergeJson() {
+
+  }
 
   function organize(img, backgroundDivClass) {
     var imgParent = img.parent(),

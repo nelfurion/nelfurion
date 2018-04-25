@@ -26,12 +26,18 @@
 <link rel="stylesheet" href="{% static "public/styles/intro.css" %}">
 <link rel="stylesheet" href="{% static "public/styles/projects.css" %}">
 <link rel="stylesheet" href="{% static "public/styles/activities.css" %}">
-
+<link rel="stylesheet" href="{% static "public/styles/contacts.css" %}">
+<script type="text/javascript">
+	window.scrollTo(0, 0);
+</script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="loader-container" id="loader">
 			<div class="loader" ></div>
+		</div>
+		<div class="loader-under-construction" style="display: none;">
+			I am currently building my website, you may notice some changes.
 		</div>
 		<div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12" id="content" style="display: none;">
 			<div class="row">
@@ -46,19 +52,19 @@
 					<div class="section-row row" id="intro-row">
 						{% include 'partials/intro.html' %}
 					</div>
-					<div class="row line-horizontal" margin-top="true"></div>
+					<div class="row line-horizontal separator-space" margin-top="true"></div>
 					<div class="section-row row" id="projects-row">
 						{% include 'partials/projects.html' with projects=projects %}
 					</div>
-					<div class="row line-horizontal"></div>
+					<div class="row line-horizontal separator-space"></div>
 					<div class="section-row row" id="hacktues-row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 							{% include 'partials/video.html' with video=hackTUES_video ratio="16by9" %}
 						</div>
 					</div>
-					<div class="row line-horizontal" margin-top="true"></div>
+					<div class="row line-horizontal separator-space" margin-top="true"></div>
 					<div class="section-row row">
-						<h3 class="heading-separated" id="more-projects-row">More applications I've worked on</h3>
+						<h3 class="heading-separated col-xs-10 offset-xs-1 col-sm-10 offset-sm-1" id="more-projects-row">More applications I've worked on</h3>
 						<div class="row">
 						  {% for project in more_projects %}
 						    <div class="project-small col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
@@ -67,11 +73,17 @@
 						  {% endfor %}
 						</div>
 					</div>
-					<div class="row line-horizontal" margin-top="true"></div>
+					<div class="row line-horizontal separator-space" margin-top="true"></div>
 					<div class="invisible row" id="activities-row">
 						{% include 'partials/activities.html' %}
 					</div>
-					<div class="row line-horizontal" margin-top="true"></div>
+					<div class="row line-horizontal separator-space" margin-top="true"></div>
+					<div class="section-row row">
+						<div id="contacts-row" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+							{% include 'partials/contacts.html' with contacts=contacts.contacts%}
+						</div>
+					</div>
+					<div class="row separator-space" margin-top="true"></div>
 				</div>
 			</div>
 		</div>
@@ -90,19 +102,39 @@
 	<script type="text/javascript">
 		$(window).on('load', function () {
 			var loader = $('#loader'),
+					underConstructionLoader = $('.loader-under-construction'),
 					content = $('#content');
-
-			loader.css('display', 'none');
-			content.css('display', 'block')
 
 			var animator = new Animator([
 				new GSAPAnimationProvider(),
 			]);
 
-			animator.animate('slideRight', $('.intro-img'), '200px', 4);
 
-			animator.animate('slideLeft', $('.intro-content-text'), '200px', 4);
-			animator.animate('fadeIn', $('.sidebar-container'), 0, 4);
+			animator.animate('fadeOut', loader, 1, {onComplete: function () {
+				loader.css('display', 'none');
+			}});
+
+			underConstructionLoader.css('display', 'block');
+			animator.animate('fadeIn', underConstructionLoader, 0, 1);
+
+			setTimeout(function () {
+				animator.animate('fadeOut', underConstructionLoader, 4, {
+						onComplete: function () {
+							underConstructionLoader.css('display', 'none');
+							content.css('display', 'block')
+
+							/*var introImg = $('.intro-img')
+									introImgLeftOffset = introImg.offset().left,
+									introImgSlideFrom = introImgLeftOffset + introImg.width();*/
+
+
+							animator.animate('slideRight', $('.intro-img'), '200px', 4, {opacity: 0});
+							animator.animate('slideLeft', $('.intro-content-text'), '200px', 4, {opacity: 0});
+							animator.animate('fadeIn', $('.sidebar-container'), 0, 4);
+						}
+					}
+				);
+			}, 3000);
 
 			$('.sidebar-link').on('click', function(event) {
 				event.preventDefault();
@@ -127,9 +159,6 @@
 			    }
 			  });
 
-				console.log(scrollY + windowHeight);
-				console.log(videoContainer.offset().top);
-
 			  if (scrollY + windowHeight > videoContainer.offset().top) {
 					if (videoContainer.hasClass('invisible')) {
 						videoContainer.removeClass('invisible');
@@ -143,10 +172,11 @@
 				if (scrollY + windowHeight > activitiesContainer.offset().top &&
 						activitiesContainer.hasClass('invisible')) {
 					activitiesContainer.removeClass('invisible');
-
+					/*
 					var activitiesTimeline = new TimelineMax({repeat:0, repeatDelay:1});
 					activitiesTimeline.add(animator.animate('fadeIn', $('.activities-papers'), 0, 1));
 					activitiesTimeline.add(animator.animate('fadeIn', $('.activities-reports'), 0, 1));
+					*/
 				}
 			});
 		});

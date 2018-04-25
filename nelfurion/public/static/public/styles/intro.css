@@ -15,11 +15,13 @@
 .intro-content h1 {
   font-size: 40px;
   line-height: 60px;
+  margin-bottom: 50px;
 }
 
 .intro-content p {
   font-size: 1.4em;
-  color: rgba(255,255,255,.7);
+  /*color: rgba(255,255,255,.7);*/
+  color: white;
 }
 
 .img-panel {
@@ -31,12 +33,14 @@
 
 .intro-img-container {
   width: 542px;
-  max-width: 542px;
 }
 
 .intro-img-container img {
-  width: 542px;
   position: relative;
+  max-width: 542px;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
 }
 
 

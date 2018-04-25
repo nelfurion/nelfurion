@@ -9,9 +9,19 @@ body {
   padding-top: 50px;
 }
 
+.loader-under-construction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.separator-space {
+  margin-bottom: 40px;
+}
+
 .line-horizontal {
   border-top: 1px solid rgba(255,255,255,.2);
-  margin-bottom: 40px;
 }
 
 .line-horizontal[margin-top=true] {
@@ -54,6 +64,10 @@ body {
 
 .invisible {
   visibility: hidden;
+}
+
+.not-displayed {
+  display: none;
 }
 
 .full-space {

@@ -1,0 +1,21 @@
+#contacts-row .row {
+  text-align: center;
+}
+
+#contacts-row div[class^="col"] {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#contacts-row .media-horizontal-sm span {
+  color: #549BE2
+}
+
+#contacts-row .media-horizontal-sm img {
+  width: 20px;
+  height: auto;
+}
+
+#contacts-row .media-horizontal-sm {
+  display: inline-block;
+}
